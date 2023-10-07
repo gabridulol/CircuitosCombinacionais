@@ -1,0 +1,1 @@
+`include "./Verilog/Codificador.v"
