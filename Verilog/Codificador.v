@@ -12,10 +12,10 @@ always @(posedge Ready or posedge Reset) begin
     Display = 7'b0000000;
   end else if (Ready) begin
 
-    Output[3] = ~A ~B ~C + ~B D + ~A C D + A B ~D
-    Output[2] = ~A ~D + ~A C + B C
-    Output[1] = ~A ~B ~C + ~A ~C ~D + ~A B C + A ~C D + A ~B C ~D
-    Output[0] = ~A C D + B D + ~A B C + A ~C D + A B ~C
+    Output[3] = ~A ~B ~C + ~B D + ~A C D + A B ~D  (~input[3] & ~input[2] & ~input[1]) | (~input[2] & input[0]) | (~input[3] & input[1] & input[0]) | (input[3] & input[2] & ~input[0])
+    Output[2] = ~A ~D + ~A C + B  (~input[3] & ~input[0]) | (~input[3] & input[1]) | (input[2])
+    Output[1] = ~A ~B ~C + ~A ~C ~D + ~A B C + A ~C D + A ~B C ~D (~input[3] & ~input[2] & ~input[1]) | (~input[3] & ~input[1] & ~input[0]) | (~input[3] & input[2] & input[1]) | (input[3] & ~input[1] & input[0]) | (input[3] & ~input[2] & input[1] & ~input[0])
+    Output[0] = ~A C D + B D + ~A B C + A ~C D + A B ~C  (~input[3] & input[1] & input[0]) | (input[2] & input[0]) | (~input[3] & input[2] & input[1]) | (input[3] & ~input[1] & input[0]) | (input[3] & input[2] & ~input[1])
 
     Display[6] = 
     Display[5] =
