@@ -1,3 +1,7 @@
+// iverilog -o ./Verilog/OutputFile ./Verilog/Testbench.v ./Verilog/Codificador.v ./Verilog/Display.v
+// vvp ./Verilog/OutputFile
+// gtkwave ./Verilog/GTKWaves.vcd
+
 module Testbench();
 
   reg [3:0] Input;
@@ -21,17 +25,21 @@ module Testbench();
   integer i;
 
   initial begin
-    $dumpfile("GTKWaves.vcd");
+    $dumpfile("./Verilog/GTKWave.vcd");
     $dumpvars();
-    Ready = 0; // Sinal de Controle - Ready
+    Ready = 1; // Sinal de Controle - Ready
     Reset = 0; // Sinal de Controle - Reset
+    $display("INICIANDO SIMULAÇÃO");
+    $display("--------------------------");
     for (i = 0; i <= 15; i = i + 1) begin
       Input = i;
       #10
       $display("Entrada : %b %b %b %b", Input[3], Input[2], Input[1], Input[0]);
       $display("Codificado : %b %b %b %b", Output[3], Output[2], Output[1], Output[0]);
-      $display("Display : %b %b %b %b %b %b %b\n", Display[6], Display[5], Display[4], Display[3], Display[2], Display[1], Display[0]);
+      $display("Display : %b %b %b %b %b %b %b", Display[6], Display[5], Display[4], Display[3], Display[2], Display[1], Display[0]);
+      $display("--------------------------");
     end
+    $display("FIM DA SIMULAÇÃO");
     $finish;
   end
 

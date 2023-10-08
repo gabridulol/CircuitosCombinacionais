@@ -9,6 +9,7 @@ assign Display[4] = (~Output[3] & ~Output[1]) | (~Output[3] & Output[0]) | (~Out
 assign Display[3] = (~Output[3] & ~Output[2] & ~Output[0]) | (~Output[2] & Output[1] & Output[0]) | (Output[2] & ~Output[1] & Output[0]) | (Output[2] & Output[1] & ~Output[0]) | (Output[3] & ~Output[1]);
 assign Display[2] = (~Output[2] & ~Output[0]) | (Output[1] & ~Output[0]) | (Output[3] & Output[1]) | (Output[3] & Output[2]);
 assign Display[1] = (~Output[1] & ~Output[0]) | (~Output[3] & Output[2] & ~Output[1]) | (Output[2] & ~Output[0]) | (Output[3] & ~Output[2]) | (Output[3] & Output[1]);
-assign Display[0] = (~Output[2] & Output[1]) | (Output[2] & ~Output[1]) | (Output[2] & ~Output[0]) | (Output[3]);
+assign Display[0] = (~Output[2] & Output[1]) | (Output[1] & ~Output[0]) | (~Output[3] & Output[2] & ~Output[1]) | (Output[3] & ~Output[2]) | (Output[3] & Output[0]);
+
 
 endmodule
