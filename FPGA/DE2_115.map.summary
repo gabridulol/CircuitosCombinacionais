@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Oct 20 22:21:08 2023
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : DE2_115
+Top-level Entity Name : DE2_115
+Family : Cyclone IV E
+Total logic elements : 22
+    Total combinational functions : 22
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 525
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
