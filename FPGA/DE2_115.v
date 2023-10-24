@@ -29,13 +29,13 @@ module DE2_115(
 
 	//////////// SEG7 //////////
 	HEX0,
-	HEX1,
-	HEX2,
-	HEX3,
-	HEX4,
-	HEX5,
-	HEX6,
-	HEX7,
+// 	HEX1,
+// 	HEX2,
+// 	HEX3,
+// 	HEX4,
+// 	HEX5,
+// 	HEX6,
+// 	HEX7,
 
 	//////////// LCD //////////
 	LCD_BLON,
@@ -234,13 +234,13 @@ input 		    [17:0]		SW;
 
 //////////// SEG7 //////////
 output		     [6:0]		HEX0;
-output		     [6:0]		HEX1;
-output		     [6:0]		HEX2;
-output		     [6:0]		HEX3;
-output		     [6:0]		HEX4;
-output		     [6:0]		HEX5;
-output		     [6:0]		HEX6;
-output		     [6:0]		HEX7;
+// output		     [6:0]		HEX1;
+// output		     [6:0]		HEX2;
+// output		     [6:0]		HEX3;
+// output		     [6:0]		HEX4;
+// output		     [6:0]		HEX5;
+// output		     [6:0]		HEX6;
+// output		     [6:0]		HEX7;
 
 //////////// LCD //////////
 output		          		LCD_BLON;

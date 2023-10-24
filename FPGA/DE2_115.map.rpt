@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_115
-Fri Oct 20 22:21:08 2023
+Tue Oct 24 11:02:31 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 20 22:21:08 2023          ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 24 11:02:31 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; DE2_115                                        ;
 ; Top-level Entity Name              ; DE2_115                                        ;
@@ -52,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Total combinational functions  ; 22                                             ;
 ;     Dedicated logic registers      ; 0                                              ;
 ; Total registers                    ; 0                                              ;
-; Total pins                         ; 525                                            ;
+; Total pins                         ; 476                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -181,8 +181,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;             ;
 ; Total combinational functions               ; 22          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 13          ;
-;     -- 3 input functions                    ; 8           ;
+;     -- 4 input functions                    ; 14          ;
+;     -- 3 input functions                    ; 7           ;
 ;     -- <=2 input functions                  ; 1           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
@@ -193,14 +193,14 @@ https://fpgasoftware.intel.com/eula.
 ;     -- Dedicated logic registers            ; 0           ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 525         ;
+; I/O pins                                    ; 476         ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; SW[0]~input ;
 ; Maximum fan-out                             ; 9           ;
-; Total fan-out                               ; 827         ;
-; Average fan-out                             ; 0.64        ;
+; Total fan-out                               ; 779         ;
+; Average fan-out                             ; 0.66        ;
 +---------------------------------------------+-------------+
 
 
@@ -209,7 +209,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name ; Library Name ;
 +------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-------------+--------------+
-; |DE2_115                     ; 22 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 525  ; 0            ; |DE2_115                         ; DE2_115     ; work         ;
+; |DE2_115                     ; 22 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 476  ; 0            ; |DE2_115                         ; DE2_115     ; work         ;
 ;    |Codificador:Codificador| ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115|Codificador:Codificador ; Codificador ; work         ;
 ;    |Display:Display|         ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_115|Display:Display         ; Display     ; work         ;
 +------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-------------+--------------+
@@ -236,17 +236,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 525                         ;
+; boundary_port         ; 476                         ;
 ; cycloneiii_io_obuf    ; 213                         ;
-; cycloneiii_lcell_comb ; 23                          ;
-;     normal            ; 23                          ;
+; cycloneiii_lcell_comb ; 30                          ;
+;     normal            ; 30                          ;
 ;         0 data inputs ; 1                           ;
+;         1 data inputs ; 7                           ;
 ;         2 data inputs ; 1                           ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 13                          ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 14                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 0.36                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 0.55                        ;
 +-----------------------+-----------------------------+
 
 
@@ -265,7 +266,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Oct 20 22:21:02 2023
+    Info: Processing started: Tue Oct 24 11:02:26 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_115 -c DE2_115
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
@@ -277,13 +278,6 @@ Warning (12125): Using design file DE2_115.v, which is not specified as a design
 Info (12127): Elaborating entity "DE2_115" for the top level hierarchy
 Warning (10034): Output port "LEDG" at DE2_115.v(223) has no driver File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 223
 Warning (10034): Output port "LEDR[17..4]" at DE2_115.v(224) has no driver File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 224
-Warning (10034): Output port "HEX1" at DE2_115.v(237) has no driver File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 237
-Warning (10034): Output port "HEX2" at DE2_115.v(238) has no driver File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 238
-Warning (10034): Output port "HEX3" at DE2_115.v(239) has no driver File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 239
-Warning (10034): Output port "HEX4" at DE2_115.v(240) has no driver File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 240
-Warning (10034): Output port "HEX5" at DE2_115.v(241) has no driver File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 241
-Warning (10034): Output port "HEX6" at DE2_115.v(242) has no driver File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 242
-Warning (10034): Output port "HEX7" at DE2_115.v(243) has no driver File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 243
 Warning (10034): Output port "VGA_B" at DE2_115.v(272) has no driver File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 272
 Warning (10034): Output port "VGA_G" at DE2_115.v(275) has no driver File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 275
 Warning (10034): Output port "VGA_R" at DE2_115.v(277) has no driver File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 277
@@ -591,55 +585,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[15]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 224
     Warning (13410): Pin "LEDR[16]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 224
     Warning (13410): Pin "LEDR[17]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 224
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 237
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 237
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 237
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 237
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 237
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 237
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 237
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 238
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 238
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 238
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 238
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 238
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 238
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 238
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 239
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 239
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 239
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 239
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 239
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 239
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 239
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 240
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 240
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 240
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 240
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 240
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 240
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 240
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 241
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 241
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 241
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 241
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 241
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 241
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 241
-    Warning (13410): Pin "HEX6[0]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 242
-    Warning (13410): Pin "HEX6[1]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 242
-    Warning (13410): Pin "HEX6[2]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 242
-    Warning (13410): Pin "HEX6[3]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 242
-    Warning (13410): Pin "HEX6[4]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 242
-    Warning (13410): Pin "HEX6[5]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 242
-    Warning (13410): Pin "HEX6[6]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 242
-    Warning (13410): Pin "HEX7[0]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 243
-    Warning (13410): Pin "HEX7[1]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 243
-    Warning (13410): Pin "HEX7[2]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 243
-    Warning (13410): Pin "HEX7[3]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 243
-    Warning (13410): Pin "HEX7[4]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 243
-    Warning (13410): Pin "HEX7[5]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 243
-    Warning (13410): Pin "HEX7[6]" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 243
     Warning (13410): Pin "LCD_BLON" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 246
     Warning (13410): Pin "LCD_EN" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 248
     Warning (13410): Pin "LCD_ON" is stuck at GND File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 249
@@ -866,15 +811,15 @@ Warning (21074): Design contains 71 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "HSMC_CLKIN_P1" File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 394
     Warning (15610): No output dependent on input pin "HSMC_CLKIN_P2" File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 395
     Warning (15610): No output dependent on input pin "HSMC_CLKIN0" File: /home/gabriel/Documentos/myWorkspace/UFV - Ciência da Computação/CCF 251 - Introdução Aos Sistemas Lógicos Digitais/Trabalho Prático 01 - Circuitos Combinacionais/FPGA/DE2_115.v Line: 396
-Info (21057): Implemented 547 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 498 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 77 input pins
-    Info (21059): Implemented 235 output pins
+    Info (21059): Implemented 186 output pins
     Info (21060): Implemented 213 bidirectional pins
     Info (21061): Implemented 22 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 588 warnings
-    Info: Peak virtual memory: 423 megabytes
-    Info: Processing ended: Fri Oct 20 22:21:08 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:19
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 532 warnings
+    Info: Peak virtual memory: 451 megabytes
+    Info: Processing ended: Tue Oct 24 11:02:31 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:15
 
 
